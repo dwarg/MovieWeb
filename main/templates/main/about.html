@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <br>
+    <div class="card" id="backdrop">
+        <div class="card-body">
+            <div class="text-center h6">This is a simple academic project. The created web application allows you to view, add and edit videos and reviews.</div>
+              <p class="text-left font-weight-bold">Features</p>
+                <li class="text-left ">Login</li> 
+                <p style="padding-left: 20px;">/accounts/login/</p>
+
+                <li class="text-left">Registration</li> 
+                <p style="padding-left: 20px;">/accounts/register/</p>
+
+                <li class="text-left">Contact</li> 
+                <p style="padding-left: 20px;">/contact/</p>
+
+                <li class="text-left">Detailed information about movies</li> 
+                <p style="padding-left: 20px;">/details/id/</p>
+
+                <li class="text-left">Possibility to add videos - only for staff</li> 
+                <p style="padding-left: 20px;">/addmovies/</p>
+
+                <li class="text-left">Possibility to edit movies - only for staff</li> 
+                <p style="padding-left: 20px;">/editmovies/id/</p>
+
+                <li class="text-left">Admin panel based on django-admin</li> 
+                <p style="padding-left: 20px;">/admin/</p>
+
+                <p class="text-left font-weight-bold">Test accounts</p> 
+                <p style="padding-left: 20px;">Admin user <br/>
+                  <b>Login:</b> admin <br/> <b>Password:</b> admin<br/>
+                  Normal user <br/>
+                  <b>Login:</b> DemoAccount<br/><b>Password:</b> Password123</p>
+                <p class="text-center"><a class="btn btn-outline-secondary btn-lg" href="{% url 'main:list' %}">Click me</a></p>
+                
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <br>
+    <div class="card" id="backdrop">
+        <div class="card-body">
+            <div class="col-md-9 mb-md-0 mb-5" >
+                <h4>Contact us directly</h4>
+                <p>
+                    Please write your name, email address and a message below if you have any questions.
+                </p>
+                <form method="post">
+                {% csrf_token %}
+                    {{form.as_p}}
+                    <button class="btn btn-danger" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
